@@ -32,6 +32,7 @@ def remove_record(name):
         print("No record found.")
 
 def viewRecord():
+    print("List of Credentials Stored:")
     try:
         with open(FILE_NAME, "r") as file :
             isi = file.read()

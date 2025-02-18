@@ -1,7 +1,6 @@
 import os
 import vault
 import generator
-from getpass import getpass
 
 def main():
     os.system('clear')
@@ -29,13 +28,15 @@ def menu():
             # TODO: Implement password, store as hash.
             
         elif choice == "3":
+            os.system('clear')
             name = input("Enter the name of the service: ")
             username = input("Enter the username: ")
-            password = getpass("Enter the password: ")
+            password = input("Enter the password: ")
             os.system('clear')
             vault.add_record(name, username, password)
         
         elif choice == "4":
+            os.system('clear')
             name = input("Enter the name of the service: ")
             vault.remove_record(name)
             
