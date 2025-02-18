@@ -1,5 +1,6 @@
 import random
 import string
+import os
 
 def generate_password(length, char_upper, char_lower, digits, special):
     if char_upper + char_lower + digits + special > length:
@@ -17,3 +18,13 @@ def generate_password(length, char_upper, char_lower, digits, special):
 
     random.shuffle(password)
     return ''.join(password)
+
+def print_password():
+    length = int(input("Enter the length of the password: "))
+    num_uppercase = int(input("Enter the number of uppercase letters: "))
+    num_lowercase = int(input("Enter the number of lowercase letters: "))
+    num_digits = int(input("Enter the number of digits: "))
+    num_special = int(input("Enter the number of special characters: "))
+    os.system('clear')
+
+    print(f"Your newly generated password is: {generate_password(length, num_uppercase, num_lowercase, num_digits, num_special)}")

@@ -319,6 +319,9 @@ _Pvt_Extensions
 .paket/paket.exe
 paket-files/
 
+# Data file
+vault
+
 # FAKE - F# Make
 .fake/
 
